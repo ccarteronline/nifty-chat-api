@@ -9,9 +9,9 @@ var app			= express();
 var bodyParser	= require('body-parser');
 
 var mongoose	= require('mongoose');
-var dbUrl		= 'mongodb://localhost:27017/test';
+var dbUrl		= 'mongodb://admin:2eh29904hf9s@ds055210.mongolab.com:55210/the-remix-chat';//'mongodb://localhost:27017/test';
 mongoose.connect(dbUrl);
-var msgModel		= require('./app/models/ncMsg');
+var msgModel	= require('./app/models/ncMsg');
 var Admin       = require('./app/models/admin');
 
 app.use(function(req, res, next) {
@@ -45,25 +45,6 @@ router.get('/', function (req, res) {
 //more routes for the api will happen here
 router.route('/destory')
 	.post(function (req, res) {
-		// var username = req.body.username;
-		// var password = req.body.password;
-
-		// if (username === undefined || password === undefined || username === '' || password === '') {
-		// 	res.json({ message: 'ERROR: You must define a username and password'});
-		// } else {
-		// 	//Check DB to make sure that admin is correct
-		// 	res.json({ message: 'Username: '+ username+ 'password: '+ password });
-		// }
-
-		//For now delete all of the users in the table but later on check to see if the users exists
-		// mongoose.connection.collections['test'].drop( function(err) {
-		// 	res.json({ message: 'All messages and admins dropped in: test'});
-		//     console.log('All messages and admins dropped in: test');
-		// });
-
-		// res.json({ message: 'All messages and admins dropped in: test'});
-
-		// console.log('Hello there.');
 
 		mongoose.connect(dbUrl, function (){
 			//Drop the DB
