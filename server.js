@@ -9,7 +9,7 @@ var app			= express();
 var bodyParser	= require('body-parser');
 
 var mongoose	= require('mongoose');
-var dbUrl		= 'mongodb://localhost:27017/test';
+var dbUrl		= 'mongodb://admin:s4s5dsaf4s5d4fass33s3sd86.mongolab.com:55210/the-remix-chat';
 mongoose.connect(dbUrl);
 var msgModel	= require('./app/models/ncMsg');
 var Admin       = require('./app/models/admin');
